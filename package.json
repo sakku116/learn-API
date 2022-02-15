@@ -1,0 +1,11 @@
+{
+  "name": "first-learn",
+  "version": "1.0.0",
+  "description": "proyek pertama membuat api - dicoding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sakku_116",
+  "license": "ISC"
+}
