@@ -1,4 +1,4 @@
-// install lodash terlebih dahulu
+// install lodash terlebih dahulu -> npm install lodash
 
 // import
 const lodash = require('lodash')
