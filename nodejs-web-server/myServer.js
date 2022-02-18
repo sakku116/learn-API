@@ -16,6 +16,7 @@ function requestListener(request, response) {
     secara default, ketika kita menggunakan
     response handler akan meresponse sebagai GET */
     const method = request.method;
+    
     if(method === "GET") {
         response.end('<h1>Welcome to my Web Server!</h1>')
     }
