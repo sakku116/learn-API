@@ -71,7 +71,7 @@ const host = 'localhost';
 /* .createServer() akan me-pass 2 argumen 'request' dan 'response' */
 const server = http.createServer(requestListener)
 
-/* listen mempunyai 4 parameter yaitu:
+/* .listen() mempunyai 4 parameter yaitu:
 - port
 - hostname
 - backlog
