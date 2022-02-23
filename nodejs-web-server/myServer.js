@@ -12,7 +12,8 @@ function requestListener(request, response) {
     request biasanya berisi method seperti GET POST PUT DELETE
     yang biasa digunakan pada command 'curl'.
     secara default, response handler akan meresponse sebagai GET */
-    /* buat variable untuk memanggil method */
+
+    /* buat variable untuk memanggil method dari request */
     const method = request.method;
     /* atau bisa menggunakan
     const { method } = request;
@@ -52,7 +53,7 @@ function requestListener(request, response) {
 
         /*
         coba untuk melakukan curl:
-        curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dicoding\"}"
+        curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Saya\"}"
         */
     }
     else if(method === "DELETE") {
@@ -60,15 +61,15 @@ function requestListener(request, response) {
     }
 }
 
-/* .createServer() akan me-pass 2 argumen 'request' dan 'response' */
-const server = http.createServer(requestListener)
+function listeningListener(port, host) {
+    console.log(`server berjalan pada http://${host}:${port}`)
+    }
 
 const port = 5000;
 const host = 'localhost';
 
-function listeningListener(port, host) {
-    console.log(`server berjalan pada http://${host}:${port}`)
-}
+/* .createServer() akan me-pass 2 argumen 'request' dan 'response' */
+const server = http.createServer(requestListener)
 
 /* listen mempunyai 4 parameter yaitu:
 - port
