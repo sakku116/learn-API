@@ -1,6 +1,6 @@
 const routes = [
 
-    // HOMEPAGE
+    // HOME PAGE
     {
         method: "*", 
         path: "/",
@@ -32,7 +32,7 @@ const routes = [
     },
 
     // USER PAGE
-    // latihan path parameter
+    /* latihan request parameter */
     {
         method: "GET",
         path: "/user/{name?}",
