@@ -1,18 +1,24 @@
 const routes = [
     /* ================ USER PAGE ================ */
-    /* latihan path parameter */
+    /* latihan menggabungkan path dan query parameter */
     {
         method: "GET",
         path: "/users/{name?}",
         handler: (request, h) => {
-            const { name } = request.params;
-            return `Hello, ${name}`
-            /*
-            request.params akan mendapatkan string parameter pada path.
-            '?' pada akhir nama parameter akan mengatasi error jika user tidak
-            memasukkan parameter.
-            */
+            const { name = 'stranger' } = request.params;
+            const { lang = 'unknown_lang'} = request.query;
+
+            if (lang === 'id') {
+                return `Hallo, ${name}`
+            }
+            else if (lang === 'en') {
+                return `Hello, ${name}`
+            }
+            else {
+                return `yo, ${name}`
+            }
         }
+        // coba untuk mengakses http://localhost:5000/users/zakky?lang=id
     },
 
     /* ================ HOME PAGE ================ */
