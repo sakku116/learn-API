@@ -30,9 +30,8 @@ const routes = [
     },
 
     // memungkinkan client mengubah data
-    // ditemukan issue error pada front end untuk fungsi edit note.
     {
-        method: 'POST',
+        method: 'PUT',
         path: '/notes/{id}',
         handler: editNoteByIdHandler,
     },
