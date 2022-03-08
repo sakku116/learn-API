@@ -1,5 +1,5 @@
 console.log('membuat web server menggunakan Hapi');
-console.log('latihan query parameter, (lihat di route.js)')
+console.log('latihan body request atau payload dalam Hapi, (lihat di route.js)')
 
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes')
